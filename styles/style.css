@@ -4,7 +4,7 @@
   max-width: 990px;
   font-family: "Montserrat", sans-serif;
   font-size: 100%;
-  line-height: auto;
+  line-height: normal;
   text-transform: uppercase;
   color: #FFFFFF;
   text-align: center;
@@ -29,11 +29,48 @@
   color: #FFFFFF;
 }
 .es-rc #es-rc-content .es-section-header {
-  font-size: 40px;
+  font-size: clamp(32px, 30.09px + 0.597vw, 36px);
   font-weight: 900;
 }
 .es-rc #es-rc-content .es-section-header--smaller {
   font-size: 25px;
+}
+.es-rc #es-rc-content .es-heartbeat {
+  animation: es-heartbeat 5s ease-in-out infinite both;
+}
+.es-rc #es-rc-content .es-tech {
+  background-color: #F97500;
+  padding: 16px;
+}
+.es-rc #es-rc-content .es-tech__subtitle {
+  font-weight: 800;
+  font-size: 25px;
+  text-transform: none;
+}
+.es-rc #es-rc-content .es-tech__left--header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.es-rc #es-rc-content .es-tech__right--header {
+  margin-bottom: 16px;
+}
+.es-rc #es-rc-content .es-tech__stampCtn {
+  width: 70%;
+  max-width: 200px;
+  margin: auto;
+}
+.es-rc #es-rc-content .es-tech__text {
+  font-weight: 800;
+  font-size: 25px;
+}
+.es-rc #es-rc-content .es-tech__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.es-rc #es-rc-content .es-tech__lineCtn {
+  display: none;
 }
 .es-rc #es-rc-content .es-cross {
   background-color: #97BF14;
@@ -71,10 +108,10 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-end;
+  gap: 20px;
 }
 .es-rc #es-rc-content .es-cross__single {
   max-width: 200px;
-  margin: 10px;
   display: grid;
   grid-template-rows: 350px 60px 200px 40px;
 }
@@ -135,11 +172,109 @@
     left: 32px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 720px) {
+  .es-rc #es-rc-content .es-tech {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    min-height: 450px;
+    padding: 48px 32px;
+  }
+  .es-rc #es-rc-content .es-tech__subtitle {
+    font-size: 20px;
+  }
+  .es-rc #es-rc-content .es-tech__bg {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+  }
+  .es-rc #es-rc-content .es-tech__left, .es-rc #es-rc-content .es-tech__right {
+    width: 45%;
+  }
+  .es-rc #es-rc-content .es-tech__left {
+    text-align: left;
+  }
+  .es-rc #es-rc-content .es-tech__right {
+    text-align: right;
+  }
+  .es-rc #es-rc-content .es-tech__right--header {
+    margin-bottom: 50px;
+  }
+  .es-rc #es-rc-content .es-tech__stampCtn {
+    max-width: 150px;
+    margin-right: 32px;
+  }
+  .es-rc #es-rc-content .es-tech__single {
+    transition: all 400ms ease-in-out;
+  }
+  .es-rc #es-rc-content .es-tech__single:hover {
+    margin-left: -10px;
+    scale: 1.05;
+  }
+  .es-rc #es-rc-content .es-tech__lineCtn {
+    display: flex;
+    align-items: center;
+  }
+  .es-rc #es-rc-content .es-tech__plus {
+    font-weight: 700;
+    font-size: 20px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 99px;
+    outline: 2px solid #0DB3CA;
+    color: #0DB3CA;
+    background-color: #FFFFFF;
+    flex: 1 0 auto;
+  }
+  .es-rc #es-rc-content .es-tech__line {
+    border-bottom: 2px solid white;
+    height: 2px;
+    width: 100%;
+  }
   .es-rc #es-rc-content .es-cross .es-video__container {
     padding-inline: 48px;
   }
   .es-rc #es-rc-content .es-cross .es-video__pack {
     left: 48px;
+  }
+}
+@media (min-width: 768px) {
+  .es-rc #es-rc-content .es-tech__left, .es-rc #es-rc-content .es-tech__right {
+    width: 47%;
+  }
+  .es-rc #es-rc-content .es-tech__stampCtn {
+    max-width: 180px;
+    margin-top: 50px;
+    margin-right: 50px;
+  }
+}
+@keyframes es-heartbeat {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
   }
 }/*# sourceMappingURL=style.css.map */
