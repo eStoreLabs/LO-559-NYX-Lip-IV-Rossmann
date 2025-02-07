@@ -86,6 +86,67 @@ body {
         animation: es-heartbeat 5s ease-in-out infinite both;
     }
 
+    .es-kv {
+        background-color: $es-pink;
+
+        &__left {
+            position: relative;
+        }
+
+        &__logo {
+            position: absolute;
+            width: 40%;
+            max-width: 200px;
+            top: $padding-S;
+            left: $padding-S;
+        }
+
+        &__photo {
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &__textWrapper {
+            position: absolute;
+            bottom: $padding-M;
+            width: 100%;
+            padding-inline: $padding-S;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        &__text {
+            font-weight: $fw-extraBold;
+            font-size: $fs-L;
+            background-color: $es-pink;
+        }
+
+        &__right {
+            padding: $padding-M $padding-S;
+        }
+
+        &__imgWrapper {
+            position: relative;
+        }
+        &__stamp {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 55%;
+        }
+
+        .es-slider__cardsWrapper {
+            flex-direction: row;
+        }
+        .es-slider__card--header {
+            font-size: $fs-base;
+        }
+    }
+
     .es-colors {
         background-color: $es-blue;
 
@@ -536,6 +597,13 @@ body {
 
     @media (min-width: 720px) {
 
+        .es-kv {
+            display: flex;
+            &__left,
+            &__right {
+                width: 50%;
+            }
+        }
 
         .es-tech {
             position: relative;

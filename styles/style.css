@@ -45,6 +45,57 @@ body {
 .es-rc #es-rc-content .es-heartbeat {
   animation: es-heartbeat 5s ease-in-out infinite both;
 }
+.es-rc #es-rc-content .es-kv {
+  background-color: #F57DB3;
+}
+.es-rc #es-rc-content .es-kv__left {
+  position: relative;
+}
+.es-rc #es-rc-content .es-kv__logo {
+  position: absolute;
+  width: 40%;
+  max-width: 200px;
+  top: 16px;
+  left: 16px;
+}
+.es-rc #es-rc-content .es-kv__photo {
+  width: 100%;
+}
+.es-rc #es-rc-content .es-kv__photo img {
+  width: 100%;
+}
+.es-rc #es-rc-content .es-kv__textWrapper {
+  position: absolute;
+  bottom: 24px;
+  width: 100%;
+  padding-inline: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.es-rc #es-rc-content .es-kv__text {
+  font-weight: 800;
+  font-size: 25px;
+  background-color: #F57DB3;
+}
+.es-rc #es-rc-content .es-kv__right {
+  padding: 24px 16px;
+}
+.es-rc #es-rc-content .es-kv__imgWrapper {
+  position: relative;
+}
+.es-rc #es-rc-content .es-kv__stamp {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+}
+.es-rc #es-rc-content .es-kv .es-slider__cardsWrapper {
+  flex-direction: row;
+}
+.es-rc #es-rc-content .es-kv .es-slider__card--header {
+  font-size: 16px;
+}
 .es-rc #es-rc-content .es-colors {
   background-color: #0DB3CA;
 }
@@ -393,6 +444,12 @@ body {
   }
 }
 @media (min-width: 720px) {
+  .es-rc #es-rc-content .es-kv {
+    display: flex;
+  }
+  .es-rc #es-rc-content .es-kv__left, .es-rc #es-rc-content .es-kv__right {
+    width: 50%;
+  }
   .es-rc #es-rc-content .es-tech {
     position: relative;
     display: flex;
