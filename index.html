@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/swiper-bundle.min.css">
     <link rel="stylesheet" href="./styles/style.css">
 
 
@@ -19,6 +20,68 @@
     <div class="es-rc">
         <div id="es-rc-content">
 
+            <div class="es-slider">
+
+                <!-- Slider main container -->
+                <div class="es-swiper" style="
+                background-image: url(./images/bg-slider.png);">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+
+                        <!-- Slides -->
+                        <div class="swiper-slide es-slider__slide-1">
+                            <p class=" es-section-header">
+                                PODWÓJNY EFEKT ZA JEDNYM POCIĄGNIĘCIEM
+                            </p>
+                            <div class="es-slider__cardsWrapper">
+                                <div class="es-slider__card">
+                                    <div class="es-slider__card--header">mokry błysk</div>
+                                    <div class="es-slider__card--img">
+                                        <img src="./images/lips-1.jpg" alt="mokry błysk">
+                                    </div>
+                                </div>
+                                <div class="es-slider__card">
+                                    <div class="es-slider__card--header">trwały tint</div>
+                                    <div class="es-slider__card--img">
+                                        <img src="./images/lips-2.jpg" alt="mokry błysk">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide es-slider__slide-2">
+                            <div class="es-slider__card es-slider__card-2">
+                                <img class="es-slider__card--img es-slider__card-2--img es-slider__card-2--img-green" src="./images/hands-1.png" alt="">
+                                <div class="es-slider__card-2--bottomText es-slider__card-2--bottomText-1">
+                                    <p>MOKRY BŁYSK</p>
+                                    <p>TRWAŁY TINT</p>
+                                </div>
+                            </div>
+                            <div class="es-slider__card es-slider__card-2">
+                                <img class="es-slider__card--img es-slider__card-2--img es-slider__card-2--img-yellow" src="./images/hands-2.png" alt="">
+                                <div class="es-slider__card-2--bottomText">
+                                    <p>MOKRY BŁYSK</p>
+                                    <p>TRWAŁY TINT</p>
+                                </div>
+                            </div>
+                            <div class="es-slider__card es-slider__card-2">
+                                <img class="es-slider__card--img es-slider__card-2--img es-slider__card-2--img-pink" src="./images/hands-3.png" alt="">
+                                <div class="es-slider__card-2--bottomText">
+                                    <p>MOKRY BŁYSK</p>
+                                    <p>TRWAŁY TINT</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="es-swiper__buttons">
+                        <div class="es-swiper-button-prev">&#8249;</div>
+                        <div class="es-swiper-pagination"></div>
+                        <div class="es-swiper-button-next">&#8250;</div>
+                    </div>
+
+                </div>
+            </div>
 
 
 
@@ -26,7 +89,7 @@
 
                 <div class="es-tech__left">
                     <div class="es-tech__left--header">
-                        <p class="es-section-header">Technologia water-breaking</p>
+                        <p class="es-section-header">Technologia<br>water-breaking</p>
                         <p class="es-tech__subtitle">dla uczucia lekkości <br>i nawiżenia!</p>
                     </div>
 
@@ -155,7 +218,20 @@
 
         </div>
     </div>
-
+    <script src="./scripts/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.es-swiper', {
+            loop: true,
+            autoHeight: true,
+            pagination: {
+                el: '.es-swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.es-swiper-button-next',
+                prevEl: '.es-swiper-button-prev'
+            }
+        })
+    </script>
 </body>
 
 </html>
